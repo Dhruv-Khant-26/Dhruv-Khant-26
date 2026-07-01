@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380">
+  <defs>
+    <radialGradient id="bgL" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#060614"/>
+      <stop offset="100%" stop-color="#020208"/>
+    </radialGradient>
+    <filter id="glowL">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowLSm">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="chamber1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#001a33"/>
+      <stop offset="100%" stop-color="#000a1a"/>
+    </linearGradient>
+    <linearGradient id="chamber2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a0033"/>
+      <stop offset="100%" stop-color="#0a0022"/>
+    </linearGradient>
+    <linearGradient id="chamber3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#001a1a"/>
+      <stop offset="100%" stop-color="#000a0a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="380" fill="url(#bgL)"/>
+  <text x="450" y="40" font-family="Arial Black, sans-serif" font-size="11" fill="#00ffcc"
+        text-anchor="middle" letter-spacing="8" opacity="0.9">— AI LABORATORY —</text>
+
+  <!-- CONTAINMENT CHAMBER 1: RAG System -->
+  <g transform="translate(45, 70)">
+    <!-- Chamber outer frame -->
+    <rect width="240" height="270" rx="8" fill="url(#chamber1)" stroke="#00d4ff" stroke-width="1.5"/>
+    <!-- Glow border animation -->
+    <rect width="240" height="270" rx="8" fill="none" stroke="#00d4ff" stroke-width="3" opacity="0.2" filter="url(#glowL)">
+      <animate attributeName="opacity" values="0.1;0.4;0.1" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Top scanner line -->
+    <line x1="10" y1="0" x2="230" y2="0" stroke="#00d4ff" stroke-width="2" filter="url(#glowLSm)"/>
+    <!-- Corner brackets -->
+    <path d="M0,0 L20,0 M0,0 L0,20" stroke="#00d4ff" stroke-width="2" fill="none"/>
+    <path d="M240,0 L220,0 M240,0 L240,20" stroke="#00d4ff" stroke-width="2" fill="none"/>
+    <path d="M0,270 L0,250 M0,270 L20,270" stroke="#00d4ff" stroke-width="2" fill="none"/>
+    <path d="M240,270 L240,250 M240,270 L220,270" stroke="#00d4ff" stroke-width="2" fill="none"/>
+
+    <!-- Experiment label -->
+    <text x="120" y="28" font-family="'Courier New', monospace" font-size="8" fill="#00d4ff"
+          text-anchor="middle" letter-spacing="3">EXPERIMENT-001</text>
+
+    <!-- SVG visual: RAG Network -->
+    <g transform="translate(120, 130)">
+      <!-- Central document -->
+      <rect x="-25" y="-35" width="50" height="60" rx="4" fill="#001a33" stroke="#00d4ff" stroke-width="1">
+        <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+      </rect>
+      <line x1="-15" y1="-20" x2="15" y2="-20" stroke="#00d4ff" stroke-width="1" opacity="0.7"/>
+      <line x1="-15" y1="-10" x2="15" y2="-10" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+      <line x1="-15" y1="0" x2="10" y2="0" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+      <line x1="-15" y1="10" x2="12" y2="10" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+
+      <!-- Retrieval beams -->
+      <line x1="0" y1="-35" x2="-50" y2="-70" stroke="#00d4ff" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6">
+        <animate attributeName="stroke-dashoffset" values="0;-12" dur="1s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="-35" x2="50" y2="-70" stroke="#00d4ff" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6">
+        <animate attributeName="stroke-dashoffset" values="0;-12" dur="1s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="25" x2="0" y2="65" stroke="#00d4ff" stroke-width="1" opacity="0.5">
+        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/>
+      </line>
+
+      <!-- Vector DB nodes -->
+      <circle cx="-50" cy="-80" r="10" fill="#00d4ff" opacity="0.6" filter="url(#glowLSm)">
+        <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="50" cy="-80" r="10" fill="#00d4ff" opacity="0.6" filter="url(#glowLSm)">
+        <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.3s" repeatCount="indefinite" begin="0.3s"/>
+      </circle>
+
+      <!-- LLM output -->
+      <rect x="-35" y="65" width="70" height="20" rx="3" fill="#00d4ff" opacity="0.15" stroke="#00d4ff" stroke-width="0.8"/>
+      <text y="79" font-family="'Courier New', monospace" font-size="6" fill="#00d4ff" text-anchor="middle">→ RESPONSE</text>
+    </g>
+
+    <!-- Chamber project title -->
+    <text x="120" y="225" font-family="Arial Black, sans-serif" font-size="11" fill="white"
+          text-anchor="middle" font-weight="900">RAG SYSTEM</text>
+    <text x="120" y="242" font-family="'Courier New', monospace" font-size="8" fill="#00d4ff"
+          text-anchor="middle">Retrieval-Augmented Generation</text>
+    <text x="120" y="258" font-family="'Courier New', monospace" font-size="7" fill="#446688"
+          text-anchor="middle">LangChain · Pinecone · OpenAI</text>
+
+    <!-- Status bar -->
+    <rect x="20" y="265" width="200" height="3" rx="1.5" fill="#001122"/>
+    <rect x="20" y="265" width="170" height="3" rx="1.5" fill="#00d4ff" filter="url(#glowLSm)">
+      <animate attributeName="width" values="140;200;140" dur="4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- CONTAINMENT CHAMBER 2: Agentic AI -->
+  <g transform="translate(330, 70)">
+    <rect width="240" height="270" rx="8" fill="url(#chamber2)" stroke="#7b2fff" stroke-width="1.5"/>
+    <rect width="240" height="270" rx="8" fill="none" stroke="#7b2fff" stroke-width="3" opacity="0.2" filter="url(#glowL)">
+      <animate attributeName="opacity" values="0.1;0.4;0.1" dur="3.5s" repeatCount="indefinite" begin="0.5s"/>
+    </rect>
+    <line x1="10" y1="0" x2="230" y2="0" stroke="#7b2fff" stroke-width="2" filter="url(#glowLSm)"/>
+    <path d="M0,0 L20,0 M0,0 L0,20" stroke="#7b2fff" stroke-width="2" fill="none"/>
+    <path d="M240,0 L220,0 M240,0 L240,20" stroke="#7b2fff" stroke-width="2" fill="none"/>
+    <path d="M0,270 L0,250 M0,270 L20,270" stroke="#7b2fff" stroke-width="2" fill="none"/>
+    <path d="M240,270 L240,250 M240,270 L220,270" stroke="#7b2fff" stroke-width="2" fill="none"/>
+    <text x="120" y="28" font-family="'Courier New', monospace" font-size="8" fill="#7b2fff"
+          text-anchor="middle" letter-spacing="3">EXPERIMENT-002</text>
+
+    <!-- SVG visual: Agent Loop -->
+    <g transform="translate(120, 140)">
+      <!-- Circular agent loop -->
+      <circle r="55" fill="none" stroke="#7b2fff" stroke-width="1" stroke-dasharray="5,4" opacity="0.5">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Center agent brain -->
+      <circle r="22" fill="#1a0033" stroke="#7b2fff" stroke-width="1.5">
+        <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text y="-4" font-family="Arial Black, sans-serif" font-size="8" fill="#bf7fff" text-anchor="middle">AGENT</text>
+      <text y="8" font-family="'Courier New', monospace" font-size="6" fill="#7b2fff" text-anchor="middle">LLM</text>
+
+      <!-- Tool nodes on orbit -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite"/>
+        <circle cx="0" cy="-55" r="10" fill="#7b2fff" opacity="0.7" filter="url(#glowLSm)"/>
+        <text x="0" y="-51" font-family="'Courier New', monospace" font-size="6" fill="white" text-anchor="middle">TOOL</text>
+      </g>
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="120" to="480" dur="5s" repeatCount="indefinite"/>
+        <circle cx="0" cy="-55" r="10" fill="#bf7fff" opacity="0.6" filter="url(#glowLSm)"/>
+        <text x="0" y="-51" font-family="'Courier New', monospace" font-size="6" fill="white" text-anchor="middle">MEM</text>
+      </g>
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="240" to="600" dur="5s" repeatCount="indefinite"/>
+        <circle cx="0" cy="-55" r="10" fill="#5500cc" opacity="0.8" filter="url(#glowLSm)"/>
+        <text x="0" y="-51" font-family="'Courier New', monospace" font-size="6" fill="white" text-anchor="middle">ACT</text>
+      </g>
+    </g>
+
+    <text x="120" y="225" font-family="Arial Black, sans-serif" font-size="11" fill="white"
+          text-anchor="middle" font-weight="900">AGENTIC AI</text>
+    <text x="120" y="242" font-family="'Courier New', monospace" font-size="8" fill="#bf7fff"
+          text-anchor="middle">Autonomous AI Agent Framework</text>
+    <text x="120" y="258" font-family="'Courier New', monospace" font-size="7" fill="#446688"
+          text-anchor="middle">LangGraph · CrewAI · AutoGen</text>
+    <rect x="20" y="265" width="200" height="3" rx="1.5" fill="#110022"/>
+    <rect x="20" y="265" width="120" height="3" rx="1.5" fill="#7b2fff" filter="url(#glowLSm)">
+      <animate attributeName="width" values="80;200;80" dur="5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- CONTAINMENT CHAMBER 3: Data Analytics -->
+  <g transform="translate(615, 70)">
+    <rect width="240" height="270" rx="8" fill="url(#chamber3)" stroke="#00ffcc" stroke-width="1.5"/>
+    <rect width="240" height="270" rx="8" fill="none" stroke="#00ffcc" stroke-width="3" opacity="0.2" filter="url(#glowL)">
+      <animate attributeName="opacity" values="0.1;0.4;0.1" dur="4s" repeatCount="indefinite" begin="1s"/>
+    </rect>
+    <line x1="10" y1="0" x2="230" y2="0" stroke="#00ffcc" stroke-width="2" filter="url(#glowLSm)"/>
+    <path d="M0,0 L20,0 M0,0 L0,20" stroke="#00ffcc" stroke-width="2" fill="none"/>
+    <path d="M240,0 L220,0 M240,0 L240,20" stroke="#00ffcc" stroke-width="2" fill="none"/>
+    <path d="M0,270 L0,250 M0,270 L20,270" stroke="#00ffcc" stroke-width="2" fill="none"/>
+    <path d="M240,270 L240,250 M240,270 L220,270" stroke="#00ffcc" stroke-width="2" fill="none"/>
+    <text x="120" y="28" font-family="'Courier New', monospace" font-size="8" fill="#00ffcc"
+          text-anchor="middle" letter-spacing="3">EXPERIMENT-003</text>
+
+    <!-- SVG visual: Analytics Dashboard mini -->
+    <g transform="translate(30, 60)">
+      <!-- Bar chart -->
+      <rect x="10" y="110" width="20" height="45" rx="2" fill="#00ffcc" opacity="0.4">
+        <animate attributeName="height" values="45;60;45" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="110;95;110" dur="2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="38" y="90" width="20" height="65" rx="2" fill="#00ffcc" opacity="0.6">
+        <animate attributeName="height" values="65;50;65" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="90;105;90" dur="2.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="66" y="70" width="20" height="85" rx="2" fill="#00ffcc" opacity="0.8">
+        <animate attributeName="height" values="85;70;85" dur="1.8s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="70;85;70" dur="1.8s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="94" y="100" width="20" height="55" rx="2" fill="#00ffcc" opacity="0.5">
+        <animate attributeName="height" values="55;75;55" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="100;80;100" dur="2.2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="122" y="80" width="20" height="75" rx="2" fill="#00ffcc" opacity="0.7">
+        <animate attributeName="height" values="75;55;75" dur="2.8s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="80;100;80" dur="2.8s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="150" y="60" width="20" height="95" rx="2" fill="#00ffcc" opacity="0.9">
+        <animate attributeName="height" values="95;80;95" dur="2.1s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="60;75;60" dur="2.1s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Baseline -->
+      <line x1="0" y1="155" x2="180" y2="155" stroke="#00ffcc" stroke-width="0.8" opacity="0.4"/>
+      <!-- Trend line -->
+      <polyline points="20,125 48,105 76,78 104,115 132,88 162,58"
+                stroke="#00ffcc" stroke-width="1.5" fill="none" filter="url(#glowLSm)" opacity="0.8"/>
+    </g>
+
+    <text x="120" y="225" font-family="Arial Black, sans-serif" font-size="11" fill="white"
+          text-anchor="middle" font-weight="900">DATA ANALYTICS</text>
+    <text x="120" y="242" font-family="'Courier New', monospace" font-size="8" fill="#00ffcc"
+          text-anchor="middle">Business Intelligence &amp; Insights</text>
+    <text x="120" y="258" font-family="'Courier New', monospace" font-size="7" fill="#446688"
+          text-anchor="middle">Power BI · Python · SQL · Tableau</text>
+    <rect x="20" y="265" width="200" height="3" rx="1.5" fill="#001111"/>
+    <rect x="20" y="265" width="190" height="3" rx="1.5" fill="#00ffcc" filter="url(#glowLSm)">
+      <animate attributeName="width" values="150;200;150" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <text x="450" y="368" font-family="'Courier New', monospace" font-size="9" fill="#00ffcc"
+        text-anchor="middle" letter-spacing="4" opacity="0.5">EACH EXPERIMENT · ACTIVELY RUNNING</text>
+</svg>

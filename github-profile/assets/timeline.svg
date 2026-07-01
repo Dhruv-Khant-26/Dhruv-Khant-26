@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520">
+  <defs>
+    <radialGradient id="bgT" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#070710"/>
+      <stop offset="100%" stop-color="#020208"/>
+    </radialGradient>
+    <filter id="glowT">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowTSm">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#00d4ff"/>
+      <stop offset="50%" stop-color="#7b2fff"/>
+      <stop offset="85%" stop-color="#00ffcc"/>
+      <stop offset="100%" stop-color="#00ffcc" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d2a"/>
+      <stop offset="100%" stop-color="#05050f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="520" fill="url(#bgT)"/>
+
+  <!-- Section label -->
+  <text x="450" y="40" font-family="Arial Black, sans-serif" font-size="11" fill="#7b2fff"
+        text-anchor="middle" letter-spacing="8" opacity="0.9">— JOURNEY THROUGH TIME —</text>
+
+  <!-- Central vertical beam -->
+  <line x1="450" y1="60" x2="450" y2="490" stroke="url(#beamGrad)" stroke-width="2"/>
+
+  <!-- Traveling light along beam -->
+  <circle r="4" fill="#00d4ff" filter="url(#glowT)" opacity="0.9">
+    <animateMotion path="M450,60 L450,490" dur="3s" repeatCount="indefinite" calcMode="linear"/>
+  </circle>
+  <circle r="2" fill="#ffffff" opacity="0.8">
+    <animateMotion path="M450,60 L450,490" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0.1s"/>
+  </circle>
+
+  <!-- Node pulses on beam -->
+  <circle cx="450" cy="120" r="8" fill="#00d4ff" filter="url(#glowT)">
+    <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="230" r="8" fill="#7b2fff" filter="url(#glowT)">
+    <animate attributeName="r" values="8;12;8" dur="2.3s" repeatCount="indefinite" begin="0.4s"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.3s" repeatCount="indefinite" begin="0.4s"/>
+  </circle>
+  <circle cx="450" cy="340" r="8" fill="#00ffcc" filter="url(#glowT)">
+    <animate attributeName="r" values="8;12;8" dur="2.6s" repeatCount="indefinite" begin="0.8s"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.6s" repeatCount="indefinite" begin="0.8s"/>
+  </circle>
+  <circle cx="450" cy="440" r="8" fill="#00d4ff" filter="url(#glowT)">
+    <animate attributeName="r" values="8;12;8" dur="2.1s" repeatCount="indefinite" begin="1.2s"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.1s" repeatCount="indefinite" begin="1.2s"/>
+  </circle>
+
+  <!-- Connector lines from beam to cards -->
+  <line x1="450" y1="120" x2="660" y2="120" stroke="#00d4ff" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="450" y1="230" x2="240" y2="230" stroke="#7b2fff" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="450" y1="340" x2="660" y2="340" stroke="#00ffcc" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="450" y1="440" x2="240" y2="440" stroke="#00d4ff" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- CARD 1: BrainyBeam (RIGHT) -->
+  <g>
+    <rect x="665" y="90" width="215" height="65" rx="6" fill="url(#cardGrad1)" stroke="#00d4ff" stroke-width="1.2" opacity="0.9"/>
+    <rect x="665" y="90" width="215" height="65" rx="6" fill="#00d4ff" opacity="0.03"/>
+    <!-- Glow top border -->
+    <line x1="665" y1="90" x2="880" y2="90" stroke="#00d4ff" stroke-width="1.5" filter="url(#glowTSm)"/>
+    <text x="680" y="112" font-family="Arial Black, sans-serif" font-size="10" fill="#00d4ff" font-weight="900">BRAINYBEAM TECHNOLOGY</text>
+    <text x="680" y="128" font-family="'Courier New', monospace" font-size="9" fill="#aaddff">Data Analyst Intern</text>
+    <text x="680" y="144" font-family="'Courier New', monospace" font-size="8" fill="#666699">2024 — Present · Current</text>
+    <!-- Status dot -->
+    <circle cx="860" cy="107" r="4" fill="#00ff88">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="868" y="111" font-family="'Courier New', monospace" font-size="7" fill="#00ff88">LIVE</text>
+  </g>
+
+  <!-- CARD 2: Reliance (LEFT) -->
+  <g>
+    <rect x="20" y="200" width="215" height="65" rx="6" fill="url(#cardGrad1)" stroke="#7b2fff" stroke-width="1.2" opacity="0.9"/>
+    <line x1="20" y1="200" x2="235" y2="200" stroke="#7b2fff" stroke-width="1.5" filter="url(#glowTSm)"/>
+    <text x="35" y="222" font-family="Arial Black, sans-serif" font-size="10" fill="#bf7fff" font-weight="900">RELIANCE DIGITAL</text>
+    <text x="35" y="238" font-family="'Courier New', monospace" font-size="9" fill="#cc99ff">Assistant Supervisor</text>
+    <text x="35" y="254" font-family="'Courier New', monospace" font-size="8" fill="#666699">2022 — 2024 · 2 years</text>
+  </g>
+
+  <!-- CARD 3: Projects (RIGHT) -->
+  <g>
+    <rect x="665" y="310" width="215" height="65" rx="6" fill="url(#cardGrad1)" stroke="#00ffcc" stroke-width="1.2" opacity="0.9"/>
+    <line x1="665" y1="310" x2="880" y2="310" stroke="#00ffcc" stroke-width="1.5" filter="url(#glowTSm)"/>
+    <text x="680" y="332" font-family="Arial Black, sans-serif" font-size="10" fill="#00ffcc" font-weight="900">AI / ML PROJECTS</text>
+    <text x="680" y="348" font-family="'Courier New', monospace" font-size="9" fill="#88ffdd">RAG · LLMs · Agents · Vision</text>
+    <text x="680" y="364" font-family="'Courier New', monospace" font-size="8" fill="#666699">Ongoing · Open Source</text>
+  </g>
+
+  <!-- CARD 4: Certifications (LEFT) -->
+  <g>
+    <rect x="20" y="410" width="215" height="65" rx="6" fill="url(#cardGrad1)" stroke="#00d4ff" stroke-width="1.2" opacity="0.9"/>
+    <line x1="20" y1="410" x2="235" y2="410" stroke="#00d4ff" stroke-width="1.5" filter="url(#glowTSm)"/>
+    <text x="35" y="432" font-family="Arial Black, sans-serif" font-size="10" fill="#00d4ff" font-weight="900">CERTIFICATIONS</text>
+    <text x="35" y="448" font-family="'Courier New', monospace" font-size="9" fill="#aaddff">AWS · Azure · Google · Meta</text>
+    <text x="35" y="464" font-family="'Courier New', monospace" font-size="8" fill="#666699">AI · Cloud · Data Analytics</text>
+  </g>
+
+  <!-- Year markers on beam -->
+  <g font-family="'Courier New', monospace" font-size="8" fill="#333366" text-anchor="middle">
+    <text x="450" y="80">2022</text>
+    <text x="450" y="190">2023</text>
+    <text x="450" y="300">2024</text>
+    <text x="450" y="410">2025+</text>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="450" y="510" font-family="'Courier New', monospace" font-size="9" fill="#7b2fff"
+        text-anchor="middle" letter-spacing="4" opacity="0.6">EVERY STEP · A SYSTEM UPGRADE</text>
+</svg>

@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <radialGradient id="bgS" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#06060f"/>
+      <stop offset="100%" stop-color="#02020a"/>
+    </radialGradient>
+    <filter id="glowS">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowSm">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="pBlue" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="60%" stop-color="#0044aa"/>
+      <stop offset="100%" stop-color="#001133"/>
+    </radialGradient>
+    <radialGradient id="pPurple" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#bf7fff"/>
+      <stop offset="60%" stop-color="#6600cc"/>
+      <stop offset="100%" stop-color="#220044"/>
+    </radialGradient>
+    <radialGradient id="pCyan" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#00ffcc"/>
+      <stop offset="60%" stop-color="#007755"/>
+      <stop offset="100%" stop-color="#001122"/>
+    </radialGradient>
+    <radialGradient id="pOrange" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffaa00"/>
+      <stop offset="60%" stop-color="#aa4400"/>
+      <stop offset="100%" stop-color="#220a00"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="500" fill="url(#bgS)"/>
+
+  <!-- Stars in background -->
+  <g fill="white">
+    <circle cx="45" cy="30" r="0.8" opacity="0.4"/>
+    <circle cx="130" cy="85" r="0.6" opacity="0.3"/>
+    <circle cx="220" cy="20" r="1" opacity="0.5"/>
+    <circle cx="300" cy="70" r="0.7" opacity="0.3"/>
+    <circle cx="380" cy="15" r="0.8" opacity="0.4"/>
+    <circle cx="500" cy="45" r="0.6" opacity="0.3"/>
+    <circle cx="600" cy="25" r="1" opacity="0.5"/>
+    <circle cx="700" cy="60" r="0.7" opacity="0.3"/>
+    <circle cx="800" cy="30" r="0.8" opacity="0.4"/>
+    <circle cx="860" cy="80" r="0.6" opacity="0.3"/>
+    <circle cx="70" cy="420" r="0.8" opacity="0.4"/>
+    <circle cx="180" cy="460" r="0.6" opacity="0.3"/>
+    <circle cx="260" cy="490" r="1" opacity="0.5"/>
+    <circle cx="650" cy="470" r="0.7" opacity="0.3"/>
+    <circle cx="770" cy="445" r="0.8" opacity="0.4"/>
+    <circle cx="870" cy="480" r="0.6" opacity="0.3"/>
+  </g>
+
+  <!-- Section label -->
+  <text x="450" y="40" font-family="Arial Black, sans-serif" font-size="11" fill="#00d4ff"
+        text-anchor="middle" letter-spacing="8" opacity="0.8">— SKILLS GALAXY —</text>
+
+  <!-- Central sun - Python -->
+  <g transform="translate(450, 250)">
+    <circle r="55" fill="#0a0a2a" stroke="#00d4ff" stroke-width="1.5" opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="45" fill="url(#pBlue)" filter="url(#glowS)">
+      <animate attributeName="r" values="45;48;45" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text y="-8" font-family="Arial Black, sans-serif" font-size="11" fill="white"
+          text-anchor="middle" font-weight="900">PYTHON</text>
+    <text y="8" font-family="'Courier New', monospace" font-size="7" fill="#aaeeff"
+          text-anchor="middle">AI · ML · DL</text>
+    <!-- Orbit rings -->
+    <ellipse rx="110" ry="28" stroke="#00d4ff" stroke-width="0.5" fill="none" opacity="0.2"/>
+    <circle r="110" stroke="#00d4ff" stroke-width="0.4" fill="none" opacity="0.15" stroke-dasharray="4,6"/>
+    <circle r="160" stroke="#7b2fff" stroke-width="0.4" fill="none" opacity="0.12" stroke-dasharray="3,8"/>
+    <circle r="210" stroke="#00ffcc" stroke-width="0.3" fill="none" opacity="0.1" stroke-dasharray="2,10"/>
+  </g>
+
+  <!-- Orbit 1 planets (r=110) -->
+  <!-- TensorFlow -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 450 250" to="360 450 250" dur="8s" repeatCount="indefinite"/>
+    <g transform="translate(450, 140)">
+      <circle r="22" fill="url(#pOrange)" filter="url(#glowSm)"/>
+      <circle r="22" fill="none" stroke="#ffaa00" stroke-width="1" opacity="0.6"/>
+      <text y="-4" font-family="Arial Black, sans-serif" font-size="7" fill="white" text-anchor="middle">TF</text>
+      <text y="7" font-family="'Courier New', monospace" font-size="5" fill="#ffcc88" text-anchor="middle">TensorFlow</text>
+    </g>
+  </g>
+
+  <!-- Orbit 1: PyTorch (opposite) -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="180 450 250" to="540 450 250" dur="8s" repeatCount="indefinite"/>
+    <g transform="translate(450, 140)">
+      <circle r="20" fill="url(#pPurple)" filter="url(#glowSm)"/>
+      <circle r="20" fill="none" stroke="#bf7fff" stroke-width="1" opacity="0.6"/>
+      <text y="-4" font-family="Arial Black, sans-serif" font-size="7" fill="white" text-anchor="middle">PT</text>
+      <text y="7" font-family="'Courier New', monospace" font-size="5" fill="#ddbbff" text-anchor="middle">PyTorch</text>
+    </g>
+  </g>
+
+  <!-- Orbit 2 planets (r=160) -->
+  <!-- SQL -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="45 450 250" to="405 450 250" dur="13s" repeatCount="indefinite"/>
+    <g transform="translate(450, 90)">
+      <circle r="18" fill="url(#pCyan)" filter="url(#glowSm)"/>
+      <text y="5" font-family="Arial Black, sans-serif" font-size="7" fill="white" text-anchor="middle">SQL</text>
+    </g>
+  </g>
+
+  <!-- AWS -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="135 450 250" to="495 450 250" dur="13s" repeatCount="indefinite"/>
+    <g transform="translate(450, 90)">
+      <circle r="18" fill="url(#pOrange)" filter="url(#glowSm)"/>
+      <text y="5" font-family="Arial Black, sans-serif" font-size="7" fill="white" text-anchor="middle">AWS</text>
+    </g>
+  </g>
+
+  <!-- Docker -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="225 450 250" to="585 450 250" dur="13s" repeatCount="indefinite"/>
+    <g transform="translate(450, 90)">
+      <circle r="18" fill="url(#pBlue)" filter="url(#glowSm)"/>
+      <text y="5" font-family="Arial Black, sans-serif" font-size="7" fill="white" text-anchor="middle">🐳</text>
+    </g>
+  </g>
+
+  <!-- Azure -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="315 450 250" to="675 450 250" dur="13s" repeatCount="indefinite"/>
+    <g transform="translate(450, 90)">
+      <circle r="18" fill="url(#pPurple)" filter="url(#glowSm)"/>
+      <text y="5" font-family="Arial Black, sans-serif" font-size="7" fill="white" text-anchor="middle">Az</text>
+    </g>
+  </g>
+
+  <!-- Orbit 3 (r=210) -->
+  <!-- Power BI -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 450 250" to="360 450 250" dur="20s" repeatCount="indefinite"/>
+    <g transform="translate(450, 40)">
+      <circle r="16" fill="url(#pOrange)" filter="url(#glowSm)"/>
+      <text y="5" font-family="'Courier New', monospace" font-size="6" fill="white" text-anchor="middle">PBI</text>
+    </g>
+  </g>
+  <!-- OpenCV -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="72 450 250" to="432 450 250" dur="20s" repeatCount="indefinite"/>
+    <g transform="translate(450, 40)">
+      <circle r="15" fill="url(#pCyan)" filter="url(#glowSm)"/>
+      <text y="5" font-family="'Courier New', monospace" font-size="6" fill="white" text-anchor="middle">CV</text>
+    </g>
+  </g>
+  <!-- LLMs -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="144 450 250" to="504 450 250" dur="20s" repeatCount="indefinite"/>
+    <g transform="translate(450, 40)">
+      <circle r="16" fill="url(#pPurple)" filter="url(#glowSm)"/>
+      <text y="5" font-family="'Courier New', monospace" font-size="6" fill="white" text-anchor="middle">LLM</text>
+    </g>
+  </g>
+  <!-- PostgreSQL -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="216 450 250" to="576 450 250" dur="20s" repeatCount="indefinite"/>
+    <g transform="translate(450, 40)">
+      <circle r="15" fill="url(#pBlue)" filter="url(#glowSm)"/>
+      <text y="5" font-family="'Courier New', monospace" font-size="6" fill="white" text-anchor="middle">PG</text>
+    </g>
+  </g>
+  <!-- RAG -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="288 450 250" to="648 450 250" dur="20s" repeatCount="indefinite"/>
+    <g transform="translate(450, 40)">
+      <circle r="15" fill="url(#pOrange)" filter="url(#glowSm)"/>
+      <text y="5" font-family="'Courier New', monospace" font-size="6" fill="white" text-anchor="middle">RAG</text>
+    </g>
+  </g>
+
+  <!-- Legend -->
+  <g font-family="'Courier New', monospace" font-size="9" fill="#00d4ff" opacity="0.5">
+    <text x="30" y="490">↺ INNER ORBIT: Core ML Frameworks</text>
+    <text x="550" y="490">↺ OUTER ORBITS: Tools · Cloud · Data</text>
+  </g>
+</svg>

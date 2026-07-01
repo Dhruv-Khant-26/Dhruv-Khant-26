@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 30" width="900" height="30">
+  <defs>
+    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#00d4ff"/>
+      <stop offset="50%" stop-color="#7b2fff"/>
+      <stop offset="80%" stop-color="#00ffcc"/>
+      <stop offset="100%" stop-color="#00ffcc" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="divGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="30" fill="#030308"/>
+  <line x1="0" y1="15" x2="900" y2="15" stroke="url(#divGrad)" stroke-width="1.5" filter="url(#divGlow)"/>
+  <!-- Traveling dots -->
+  <circle r="3" fill="#00d4ff" filter="url(#divGlow)" opacity="0.9">
+    <animateMotion path="M0,15 L900,15" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="2" fill="#7b2fff" filter="url(#divGlow)" opacity="0.8">
+    <animateMotion path="M900,15 L0,15" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+  <circle r="2" fill="#00ffcc" filter="url(#divGlow)" opacity="0.8">
+    <animateMotion path="M0,15 L900,15" dur="3.5s" repeatCount="indefinite" begin="1.2s"/>
+  </circle>
+  <!-- Center diamond -->
+  <polygon points="450,10 455,15 450,20 445,15" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.5"/>
+</svg>

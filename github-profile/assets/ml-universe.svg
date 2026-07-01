@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460">
+  <defs>
+    <radialGradient id="bgU" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#05050e"/>
+      <stop offset="100%" stop-color="#020208"/>
+    </radialGradient>
+    <filter id="glowU">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowUSm">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="gal1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#0044aa" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000033" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gal2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#bf7fff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#5500cc" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#110022" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gal3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ffcc" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#007755" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#001111" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gal4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffaa00" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#aa5500" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#221100" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="460" fill="url(#bgU)"/>
+
+  <!-- Star field -->
+  <g fill="white" opacity="0.4">
+    <circle cx="50" cy="50" r="0.8"/><circle cx="150" cy="30" r="0.5"/><circle cx="280" cy="15" r="0.7"/>
+    <circle cx="400" cy="45" r="0.6"/><circle cx="550" cy="20" r="0.8"/><circle cx="680" cy="35" r="0.5"/>
+    <circle cx="800" cy="25" r="0.7"/><circle cx="870" cy="60" r="0.6"/><circle cx="100" cy="430" r="0.5"/>
+    <circle cx="250" cy="445" r="0.7"/><circle cx="450" cy="440" r="0.8"/><circle cx="650" cy="430" r="0.6"/>
+    <circle cx="820" cy="440" r="0.5"/>
+  </g>
+
+  <text x="450" y="38" font-family="Arial Black, sans-serif" font-size="11" fill="#7b2fff"
+        text-anchor="middle" letter-spacing="8" opacity="0.9">— MACHINE LEARNING UNIVERSE —</text>
+
+  <!-- Connection lines between galaxies -->
+  <g stroke="#333366" stroke-width="0.6" fill="none" stroke-dasharray="2,6">
+    <line x1="160" y1="160" x2="300" y2="250"/>
+    <line x1="740" y1="160" x2="600" y2="250"/>
+    <line x1="160" y1="160" x2="450" y2="190"/>
+    <line x1="740" y1="160" x2="450" y2="190"/>
+    <line x1="300" y1="250" x2="450" y2="310"/>
+    <line x1="600" y1="250" x2="450" y2="310"/>
+    <line x1="450" y1="190" x2="450" y2="310"/>
+    <line x1="160" y1="380" x2="300" y2="250"/>
+    <line x1="740" y1="380" x2="600" y2="250"/>
+    <line x1="160" y1="380" x2="450" y2="310"/>
+    <line x1="740" y1="380" x2="450" y2="310"/>
+  </g>
+
+  <!-- Traveling signals between galaxies -->
+  <circle r="2" fill="#00d4ff" filter="url(#glowUSm)" opacity="0.8">
+    <animateMotion path="M160,160 L450,190 L740,160" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="2" fill="#7b2fff" filter="url(#glowUSm)" opacity="0.8">
+    <animateMotion path="M300,250 L450,310 L600,250" dur="5s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <circle r="1.5" fill="#00ffcc" filter="url(#glowUSm)" opacity="0.8">
+    <animateMotion path="M160,380 L450,310 L740,380" dur="6s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+
+  <!-- Galaxy 1: Deep Learning (top left) -->
+  <g transform="translate(160, 160)">
+    <ellipse rx="70" ry="25" fill="url(#gal1)" opacity="0.6">
+      <animate attributeName="rx" values="70;80;70" dur="5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="15s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle r="20" fill="url(#gal1)" filter="url(#glowU)" opacity="0.9">
+      <animate attributeName="r" values="20;23;20" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="5" fill="white" filter="url(#glowU)" opacity="0.9"/>
+    <text y="40" font-family="Arial Black, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" font-weight="900">DEEP LEARNING</text>
+    <text y="54" font-family="'Courier New', monospace" font-size="7" fill="#6699bb" text-anchor="middle">CNN · RNN · LSTM</text>
+  </g>
+
+  <!-- Galaxy 2: Transformers (top center) -->
+  <g transform="translate(450, 185)">
+    <ellipse rx="80" ry="22" fill="url(#gal2)" opacity="0.6">
+      <animate attributeName="rx" values="80;95;80" dur="6s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" from="30" to="390" dur="18s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle r="24" fill="url(#gal2)" filter="url(#glowU)" opacity="0.9">
+      <animate attributeName="r" values="24;28;24" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="6" fill="white" filter="url(#glowU)" opacity="0.9"/>
+    <text y="44" font-family="Arial Black, sans-serif" font-size="10" fill="#bf7fff" text-anchor="middle" font-weight="900">TRANSFORMERS</text>
+    <text y="58" font-family="'Courier New', monospace" font-size="7" fill="#9966bb" text-anchor="middle">BERT · GPT · T5</text>
+  </g>
+
+  <!-- Galaxy 3: Transformers (top right) -->
+  <g transform="translate(740, 160)">
+    <ellipse rx="65" ry="20" fill="url(#gal3)" opacity="0.6">
+      <animate attributeName="rx" values="65;78;65" dur="7s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" from="-20" to="340" dur="12s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle r="20" fill="url(#gal3)" filter="url(#glowU)" opacity="0.9">
+      <animate attributeName="r" values="20;24;20" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="5" fill="white" filter="url(#glowU)" opacity="0.9"/>
+    <text y="40" font-family="Arial Black, sans-serif" font-size="10" fill="#00ffcc" text-anchor="middle" font-weight="900">VECTOR DBs</text>
+    <text y="54" font-family="'Courier New', monospace" font-size="7" fill="#559977" text-anchor="middle">Embeddings · Pinecone</text>
+  </g>
+
+  <!-- Galaxy 4: Classification/Regression (center) -->
+  <g transform="translate(300, 255)">
+    <ellipse rx="55" ry="18" fill="url(#gal4)" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="45" to="405" dur="20s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle r="17" fill="url(#gal4)" filter="url(#glowU)" opacity="0.9"/>
+    <circle r="4" fill="white" filter="url(#glowU)" opacity="0.9"/>
+    <text y="35" font-family="Arial Black, sans-serif" font-size="9" fill="#ffaa00" text-anchor="middle">CLASSIFICATION</text>
+    <text y="47" font-family="'Courier New', monospace" font-size="7" fill="#997744" text-anchor="middle">XGBoost · RF · SVM</text>
+  </g>
+
+  <!-- Galaxy 5: Agents (center right) -->
+  <g transform="translate(600, 255)">
+    <ellipse rx="55" ry="18" fill="url(#gal1)" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="-30" to="330" dur="16s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle r="17" fill="url(#gal1)" filter="url(#glowU)" opacity="0.9"/>
+    <circle r="4" fill="white" filter="url(#glowU)" opacity="0.9"/>
+    <text y="35" font-family="Arial Black, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle">AI AGENTS</text>
+    <text y="47" font-family="'Courier New', monospace" font-size="7" fill="#336688" text-anchor="middle">ReAct · CoT · MCP</text>
+  </g>
+
+  <!-- Galaxy 6: Center (RAG) -->
+  <g transform="translate(450, 315)">
+    <ellipse rx="90" ry="26" fill="url(#gal2)" opacity="0.5">
+      <animate attributeName="rx" values="90;105;90" dur="8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle r="26" fill="url(#gal2)" filter="url(#glowU)" opacity="0.9">
+      <animate attributeName="r" values="26;30;26" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="7" fill="white" filter="url(#glowU)" opacity="0.9"/>
+    <text y="48" font-family="Arial Black, sans-serif" font-size="11" fill="#bf7fff" text-anchor="middle" font-weight="900">GENERATIVE AI</text>
+    <text y="62" font-family="'Courier New', monospace" font-size="7" fill="#9966bb" text-anchor="middle">LLMs · RAG · Fine-tuning</text>
+  </g>
+
+  <!-- Galaxy 7: Bottom Left -->
+  <g transform="translate(160, 385)">
+    <ellipse rx="50" ry="16" fill="url(#gal3)" opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" from="60" to="420" dur="14s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle r="15" fill="url(#gal3)" filter="url(#glowU)" opacity="0.9"/>
+    <circle r="4" fill="white" filter="url(#glowU)" opacity="0.9"/>
+    <text y="32" font-family="Arial Black, sans-serif" font-size="9" fill="#00ffcc" text-anchor="middle">REGRESSION</text>
+    <text y="44" font-family="'Courier New', monospace" font-size="7" fill="#559977" text-anchor="middle">Linear · Ridge · LASSO</text>
+  </g>
+
+  <!-- Galaxy 8: Bottom Right -->
+  <g transform="translate(740, 385)">
+    <ellipse rx="50" ry="16" fill="url(#gal4)" opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" from="-45" to="315" dur="17s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle r="15" fill="url(#gal4)" filter="url(#glowU)" opacity="0.9"/>
+    <circle r="4" fill="white" filter="url(#glowU)" opacity="0.9"/>
+    <text y="32" font-family="Arial Black, sans-serif" font-size="9" fill="#ffaa00" text-anchor="middle">CLUSTERING</text>
+    <text y="44" font-family="'Courier New', monospace" font-size="7" fill="#997744" text-anchor="middle">K-Means · DBSCAN</text>
+  </g>
+
+  <text x="450" y="450" font-family="'Courier New', monospace" font-size="9" fill="#7b2fff"
+        text-anchor="middle" letter-spacing="4" opacity="0.5">ALL CONNECTED · ALL ALIVE · ALL LEARNING</text>
+</svg>
