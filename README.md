@@ -34,114 +34,63 @@
 <div align="center">
 <img src="assets/divider.svg" width="900" alt=""/>
 </div>
-
 &nbsp;
-
-
 <div align="center">
-
 <img src="assets/neural-brain.svg" width="900" alt="Neural Intelligence Network"/>
-
 </div>
-
 &nbsp;
-
 <div align="center">
 <img src="assets/divider.svg" width="900" alt=""/>
 </div>
-
 &nbsp;
-
-
 <div align="center">
 
 <img src="assets/skills-galaxy.svg" width="900" alt="Skills Galaxy — Orbiting Planets"/>
 
 </div>
-
 &nbsp;
-
 <div align="center">
-
-
 </div>
-
 &nbsp;
-
 <div align="center">
 <img src="assets/divider.svg" width="900" alt=""/>
 </div>
-
 &nbsp;
-
-
 <div align="center">
-
 <img src="assets/timeline.svg" width="900" alt="Career Timeline — Animated Beam"/>
-
 </div>
-
 &nbsp;
-
 <div align="center">
 <img src="assets/divider.svg" width="900" alt=""/>
 </div>
-
 &nbsp;
-
-
 <div align="center">
-
 <img src="assets/ai-lab.svg" width="900" alt="AI Laboratory — Active Experiments"/>
-
 </div>
-
 &nbsp;
-
 <div align="center">
-
 </div>
-
 &nbsp;
-
 <div align="center">
 <img src="assets/divider.svg" width="900" alt=""/>
 </div>
-
 &nbsp;
-
-
 <div align="center">
-
 <img src="assets/ml-universe.svg" width="900" alt="Machine Learning Universe — Concept Galaxies"/>
-
 </div>
-
 &nbsp;
-
 <div align="center">
-
 </div>
-
 &nbsp;
-
 <div align="center">
 <img src="assets/divider.svg" width="900" alt=""/>
 </div>
-
 &nbsp;
-
-
 <div align="center">
-
 <img src="assets/stats-dashboard.svg" width="900" alt="System Metrics Dashboard"/>
-
 </div>
-
 &nbsp;
-
 <div align="center">
-
 <table>
 <tr>
 <td>
@@ -158,32 +107,23 @@
 </table>
 
 </div>
-
 &nbsp;
-
 <div align="center">
 
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Dhruv-Khant-26&theme=transparent&ring=7b2fff&fire=00d4ff&currStreakLabel=00ffcc&sideLabels=00d4ff&dates=666699&border=00d4ff&hide_border=false)
 
 </div>
-
 &nbsp;
-
 <div align="center">
 
 ![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=Dhruv-Khant-26&theme=algolia&column=7&margin-w=8&margin-h=8&no-bg=true)
 
 </div>
-
 &nbsp;
-
 <div align="center">
 <img src="assets/divider.svg" width="900" alt=""/>
 </div>
-
 &nbsp;
-
-
 <div align="center">
 
 </div>
@@ -193,52 +133,36 @@
 ![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=Dhruv-Khant-26&bg_color=030308&color=00d4ff&line=7b2fff&point=00ffcc&area=true&area_color=7b2fff&hide_border=false&border_color=00d4ff&title_color=00d4ff)
 
 </div>
-
 &nbsp;
-
 <div align="center">
 <img src="assets/divider.svg" width="900" alt=""/>
 </div>
-
 &nbsp;
-
-
 <div align="center">
 
 
 </div>
-
 &nbsp;
-
 <div align="center">
 <img src="assets/divider.svg" width="900" alt=""/>
 </div>
-
 &nbsp;
-
-
 <div align="center">
 
 <img src="assets/ending.svg" width="900" alt="Portal — The future is not predicted. It is engineered."/>
 
 </div>
-
 &nbsp;
-
 <div align="center">
 
 </div>
-
 &nbsp;
-
 <div align="center">
 
 <img src="https://komarev.com/ghpvc/?username=DhruvKhant&style=for-the-badge&color=00d4ff&label=PROFILE+VIEWS" alt="Profile Views"/>
 
 </div>
-
 &nbsp;
-
 <div align="center">
 <img src="assets/divider.svg" width="900" alt=""/>
 </div>
